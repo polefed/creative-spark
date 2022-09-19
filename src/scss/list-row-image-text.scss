@@ -1,0 +1,82 @@
+// ===================================================================================================================================================================================================================================================================================================================================================================================================================================
+// ===================================================================================================================================================================================================================================================================================================================================================================================================================================
+
+// list row image text
+
+.what {
+  display: grid;
+  // grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+  gap: 2rem 5rem;
+  @media (min-width: 993px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  letter-spacing: 0.2px;
+
+  &__item {
+    display: flex;
+    gap: 2.8rem;
+    box-shadow: 0px 4px 34px rgba(0, 0, 0, 0.1);
+    border-radius: 29px;
+    padding: 2rem;
+    @media (max-width: 480px) {
+      display: grid;
+    }
+  }
+  &__item-image {
+    position: sticky;
+    z-index: -1;
+    top: 20px;
+    flex: 0 0 35.2rem;
+    height: 25rem;
+    filter: drop-shadow(0px 4px 33px rgba(108, 94, 57, 0.6));
+    border-radius: 23px;
+    overflow: hidden;
+    @media (max-width: 480px) {
+      padding-bottom: 70%;
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  &__item-information {
+    display: flex;
+    flex-direction: column;
+    // justify-content: space-between;
+    gap: 3.2rem;
+    @media (max-width: 480px) {
+      background-color: var(--color-1);
+      padding: 10px 5px;
+      border-radius: 10px;
+      gap: 5px;
+    }
+    a {
+      align-self: start;
+      padding: 0.8rem 4.6rem 0.8rem 2.8rem;
+      border-radius: 10px;
+      font: var(--font-4);
+      background: var(--color-6) url(../img/arrow-right.svg) right 1.1rem top 50%/3.1rem no-repeat;
+      transition: background-color var(--transition-1);
+      @media (any-hover: hover) {
+      &:hover {
+      background-color: var(--color-5);
+      }
+      }
+      @media (max-width: 992px) {
+       position: sticky;
+       left: 0;
+      }
+    }
+  }
+  &__item-label {
+   font: var(--font-2);
+  }
+  &__item-text {
+    font: var(--font-3);
+  }
+}

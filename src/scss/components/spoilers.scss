@@ -1,0 +1,123 @@
+// ===================================================================================================================================================================================================================================================================================================================================================================================================================================
+// ===================================================================================================================================================================================================================================================================================================================================================================================================================================
+
+// spoiler
+
+.spoiler {
+  overflow: hidden;
+  &__switch {
+    display: none;
+    @media (max-width: 1200px) {
+      &:checked ~ .spoiler__button {
+        background-color: var(--color-5);
+      }
+      &:checked ~ .spoiler__button:after {
+        transform: translateY(-50%) rotate(45deg);
+      }
+      &:checked ~ .spoiler__content {
+        transform: translateX(0);
+        opacity: 1;
+        max-height: 100vh;
+      }
+    }
+  }
+  &__button {
+    display: block;
+    font: var(--font-7);
+    color: var(--color-10);
+    margin-bottom: 20px;
+    cursor: default;
+    @media (max-width: 1200px) {
+      background-color: var(--color-8);
+      color: var(--color-1);
+      border-radius: 10px;
+      padding: 10px 30px 10px 10px;
+      position: relative;
+      &:after {
+        position: absolute;
+        content: "";
+        background-color: var(--color-1);
+        clip-path: var(--cross-5);
+        width: 10px;
+        height: 10px;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: transform var(--transition-2);
+      }
+    }
+  }
+  &__content {
+    display: grid;
+    gap: 20px;
+    @media (max-width: 1200px) {
+      transition: var(--transition-2);
+      transform: translateX(-100%);
+      opacity: 0;
+      max-height: 0;
+    }
+  }
+  &__content-item {
+  }
+  &__content-link {
+    transition: color var(--transition-1);
+    @media (any-hover: hover) {
+      &:hover {
+        color: red;
+      }
+    }
+  }
+}
+
+// ===================================================================================================================================================================================================================================================================================================================================================================================================================================
+// ===================================================================================================================================================================================================================================================================================================================================================================================================================================
+
+// spoilers ( js )
+
+.js-spoiler {
+  overflow: hidden;
+  &__button {
+    cursor: default;
+    @media (max-width: 1200px) {
+      background-color: gray;
+      color: white;
+      border-radius: 10px;
+      padding: 10px 30px 10px 10px;
+      position: relative;
+      &:after {
+        position: absolute;
+        content: "";
+        background-color: white;
+        clip-path: var(--cross-5);
+        width: 10px;
+        height: 10px;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: transform var(--transition-2);
+      }
+    }
+    @media (max-width: 1200px) {
+      transition: var(--transition-2);
+      &.__active {
+        background-color: gold;
+        &:after {
+          transform: translateY(-50%) rotate(45deg);
+        }
+      }
+    }
+  }
+  &__content {
+    @media (max-width: 1200px) {
+      transition: var(--transition-2);
+      transform: translateX(-100%);
+      opacity: 0;
+      max-height: 0;
+      &.__active {
+        transform: translateX(0);
+        opacity: 1;
+        max-height: 100vh;
+      }
+    }
+  }
+}

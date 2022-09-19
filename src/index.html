@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Описание страницы сайта." />
+  <link rel="icon" href="data:;base64,=">
+  <!-- <link rel="preload" href="fonts/Nunito.woff2" as="font" type="font/woff2" crossorigin> -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>Главная</title>
+</head>
+
+<body>
+  @@include('./html/components/scroll-up.html')
+  @@include('./html/header.html')
+  <section class="home">
+    <img src="img/home-img-alt.png" loading="lazy" alt="image">
+    <div class="home__container">
+      <div class="home__info">
+        <h1>The digital revolution is far more significant </h1>
+        <p>than the invention of writing or even of printing. – Douglas Engelbart, inventor of the graphical interface and the mouse</p>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <h2 class="title-1">What We <span>Offer</span></h2>
+    <div class="section__container">
+      <input id="transformCategories1" class="transform-switch" type="radio" name="transformCategories" checked>
+      <input id="transformCategories2" class="transform-switch" type="radio" name="transformCategories">
+      <div class="transform-navigation">
+        <label for="transformCategories1"></label>
+        <label for="transformCategories2"></label>
+      </div>
+      @@include('./html/components/list-row-image-text.html')
+    </div>
+  </section>
+  <!-- <section class="section">
+    <h3 class="title-1">A <span>Full-Service</span> Agency</h3>
+    <div class="section__container">
+      @@include('./html/components/__row-text-image.html')
+      <div class="progress-bar" style="--progressValue: 70"></div>
+    </div>
+  </section> -->
+  <section class="row-text-image section">
+    <h3 class="title-1">A <span>Full-Service</span> Agency</h3>
+    <div class="row-text-image__container container">
+      <div class="row-text-image__information">
+        <p>Every business is different and its marketing needs are too. We’ve developed a diverse range of specialised services to ensure success. We bring together exceptional, in-house expertise to deliver fast, effective results to elevate your business.</p>
+        <h4>Our Expertise in Design & Development Softwares <span>Always striving toward ideals. Being true to our values. Clients and beyond.</span></h4>
+        <div class="progress-bar" style="--progressValue: 100"><span>GRAPHIC DESIGNING</span></div>
+        <div class="progress-bar" style="--progressValue: 100"><span>WEBSITE DESIGN DEVELOPMENT</span></div>
+        <div class="progress-bar" style="--progressValue: 95"><span>MOBILE APPLICATION DEVELOPMENT</span></div>
+        <div class="progress-bar" style="--progressValue: 100"><span>PRINTING</span></div>
+      </div>
+      <div class="row-text-image__image responsive-1">
+        <img src="img/full-img.jpg" loading="lazy" width="100" height="100" alt="image">
+      </div>
+    </div>
+  </section>
+
+  <section class="section form-section">
+    <div class="form-section__container">
+      <div class="form-section__image">
+        <img src="img/form-image.jpg" loading="lazy" alt="form image">
+      </div>
+      <div class="form-section__info">
+        <h5>Straight from our desk, to your Inbox.</h5>
+        <p>Subscribe to our newsletter</p>
+        <form action="#">
+          <input type="email" placeholder="Your Email">
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- @@include('./html/components/pagination.html') -->
+  @@include('./html/footer.html')
+  <!-- @@include('./html/components/copyright.html') -->
+
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  <script src="js/app.min.js" defer></script>
+</body>
+
+</html>
